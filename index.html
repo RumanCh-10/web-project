@@ -2,64 +2,134 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ruman Chapagain | Portfolio</title>
+    <title>RUMAN CHAPAGAIN | Personal Webpage</title>
+
+    <!-- External CSS -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- Internal CSS -->
+    <style>
+        /* Flexbox for Hobbies & Skills */
+        .lists-container {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .list-box {
+            background: white;
+            width: 260px;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .list-box:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+        }
+
+        .list-box ul,
+        .list-box ol {
+            list-style-position: inside;
+            padding: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        table, th, td {
+            border: 1px solid #333;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+
+    <!-- JavaScript -->
+    <script>
+        window.onload = function () {
+            alert("Welcome to Ruman Chapagain's Web Page!");
+            document.getElementById("datetime").innerHTML =
+                new Date().toLocaleString();
+        };
+    </script>
 </head>
+
 <body>
 
-    <header>
-        <nav>
-            <h2 class="logo">Ruman<span>.</span></h2>
+    <!-- Inline CSS -->
+    <h1 style="color: darkblue;">Ruman Chapagain</h1>
+
+    <!-- Image -->
+    <img src="image.png" alt="Ruman Chapagain" class="profile-img">
+
+    <!-- Description -->
+    <p>
+        Hello! My name is <strong>Ruman Chapagain</strong>.
+        I am passionate about learning new technologies and developing skills in web development.
+    </p>
+
+    <!-- Hobbies & Skills -->
+    <div class="lists-container">
+
+        <div class="list-box">
+            <h2>Hobbies</h2>
+            <ol>
+                <li>Coding</li>
+                <li>Exploring new technologies</li>
+                <li>Reading tech blogs</li>
+            </ol>
+        </div>
+
+        <div class="list-box">
+            <h2>Skills</h2>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li>HTML & CSS</li>
+                <li>Basic JavaScript</li>
+                <li>Web Design</li>
             </ul>
-        </nav>
-    </header>
-
-    <section id="home" class="hero">
-        <div class="content">
-            <h1>Hello, I'm <span>Ruman Chapagain</span></h1>
-            <p>I am passionate about learning new technology and improving my skills by creating personal portfolio websites using HTML & CSS.</p>
-            <a href="#contact" class="btn">Contact Me</a>
         </div>
-        <div class="image-box">
-            <img src="image.png" alt="Profile Image">
-        </div>
-    </section>
 
-    <section id="about" class="about">
-        <h2>About Me</h2>
-        <p>
-            I am a tech enthusiast who enjoys exploring new technologies and learning new skills. 
-            I particularly love working with HTML and CSS to build personal portfolios and simple projects 
-            that help me grow as a learner and creator.
-        </p>
-    </section>
+    </div>
 
-    <section id="skills" class="skills">
-        <h2>My Skills</h2>
-        <div class="skill-box">
-            <div class="skill-card">HTML</div>
-            <div class="skill-card">CSS</div>
-            <div class="skill-card">Responsive Design</div>
-            <div class="skill-card">Creative Thinking</div>
-            <div class="skill-card">Learning New Tech</div>
-        </div>
-    </section>
+    <!-- Hyperlink -->
+    <p>
+        Favorite Website:
+        <a href="https://www.w3schools.com" target="_blank">W3Schools</a>
+    </p>
 
-    <section id="contact" class="contact">
-        <h2>Contact Me</h2>
-        <p>You can reach out for collaboration or guidance.</p>
-        <a href="mailto:ruman@example.com" class="btn">Email Me</a>
-    </section>
+    <!-- Education Table -->
+    <h2>Education</h2>
+    <table>
+        <tr>
+            <th>Education Level</th>
+            <th>Institution Name</th>
+            <th>Year</th>
+        </tr>
+        <tr>
+            <td>SEE</td>
+            <td>Bhanudaya Secondary School</td>
+            <td>2078</td>
+        </tr>
+        <tr>
+            <td>+2</td>
+            <td>Bhanudaya Secondary School</td>
+            <td>2080</td>
+        </tr>
+    </table>
 
-    <footer>
-        <p>© 2025 Ruman Chapagain | All Rights Reserved</p>
-    </footer>
+    <!-- Date & Time -->
+    <p><strong>Current Date & Time:</strong> <span id="datetime"></span></p>
 
 </body>
 </html>
